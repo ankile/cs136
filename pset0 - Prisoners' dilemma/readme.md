@@ -1,6 +1,8 @@
-### Due Friday 9/13 at 5pm {#h.m7tqh8z30hz2 .c1}
+# Problem set 0 - Prisoners' Dilemma
 
-### Background {#h.6dgilapv53zb .c1}
+#### Due Friday 9/13 at 5pm
+
+### Background
 
 The Prisoner's Dilemma is a classic problem in game theory which is
 often used to explore behaviors in a situation of strategic
@@ -76,7 +78,7 @@ complications that noise adds to his tournament, Axelrod said that
 exploitation." How will you design a winning agent for such an
 environment?
 
-### Announcements {#h.6hmd4j14b49u .c1}
+### Announcements
 
 -   Grading: You will get full credit for your agent just by submitting
     an agent. In addition, your explanation will be graded on a scale of
@@ -92,11 +94,10 @@ environment?
 
 * * * * *
 
-###  {#h.sc5mf3x1mqq .c1 .c17}
 
-### Part 1: Making your Agents: {#h.4w1wn1436n4e .c1}
+### Part 1: Making your Agents
 
-#### The game: {#h.c2jnmakjsd3r .c15}
+#### The game
 
 Your task is to create an agent for the iterated noisy prisoner's
 dilemma described above. In each round, there will be a 5% probability
@@ -124,7 +125,7 @@ The scores are computed using the actual joint action of the two agents,
 even if the 5% noise leads one or both agents to get the wrong
 information about the other's action.
 
-#### Planning: {#h.lofi33m5543q .c15}
+#### Planning
 
 You will be modeling a game strategy using an automaton machine,
 following the description in Chapter 4. The difference is that your
@@ -155,7 +156,6 @@ different probabilities of cooperation, and switch between them based on
 what the opponent does. It might look something like this:
 
 0: 0.6 1 0 0 1
-
 1: 0.8 1 0 0 1
 
 There are two states (0 is always the initial state). When in state 0,
@@ -170,7 +170,7 @@ will always be the initial state, and the subsequent states are numbered
 1, 2, 3 and 4). Your goal is to define probabilities and transitions for
 each of the states in the format below. You need not use all 5 states.
 
-#### Format: {#h.86xcsd6avnn2 .c15}
+#### Format
 
 Each agent should have the following format. This agent is composed of
 three states, so it is written on three lines.
@@ -179,9 +179,7 @@ Your agent should have between 1 and 5 lines of text for 5 maximum
 states.
 
 0: 0.1 1 0 0 1
-
 1: 0.7 1 1 0 2
-
 2: 0.4 2 2 1 0
 
 Each line has format: state\_id: prob\_of\_cooperate state\_on\_cc
@@ -204,7 +202,7 @@ state\_on\_cd state\_on\_dc state\_on\_dd Where:
     0.05, the transition will be based on the wrong information about
     the other agent's action.
 
-#### Testing: {#h.65zwd0zczp2j .c15}
+#### Testing
 
 We have provided a mechanism to test your agents. Using [this
 page](https://www.google.com/url?q=http://cs136-hw0.seas.harvard.edu/compete.php&sa=D&ust=1568304790384000) you
@@ -215,13 +213,13 @@ agents, what actions were observed (because the data is noisy this may
 be different than the actual actions taken), the score after the round,
 and what states were moved to at the end of the round.
 
-### Part 2: Analysis: {#h.5z7k0wmckel7 .c1}
+### Part 2: Analysis
 
 Write a short write-up -- two paragraphs maximum -- explaining how your
 agent works and why you designed it that way. How do you think it will
 do against the agents of the other students?
 
-### Part 3: Submission: {#h.7jg96o44uup5 .c1}
+### Part 3: Submission
 
 By Friday 9/13, 5p, use the form
 [here](https://www.google.com/url?q=https://docs.google.com/forms/d/e/1FAIpQLSfTIdSFyR_6nPCtW3SczmfcoR0guNiU6GuIqfWmZSX_uzWXQQ/viewform?usp%3Dsf_link&sa=D&ust=1568304790386000) to
@@ -229,12 +227,12 @@ submit the assignment. There is a field for your name, Harvard username,
 agent and explanation. Again, each person should submit an agent and
 explanation.
 
-### Part 4: Competition {#h.afge84f6l81e .c1}
+### Part 4: Competition
 
 We will run each submitted agent against each of the others 10 times,
 with each game lasting 100 rounds. We will rank agents by their
 cumulative score.
 
-### Part 5: Results {#h.8lglqaq1a53b .c1}
+### Part 5: Results
 
 
