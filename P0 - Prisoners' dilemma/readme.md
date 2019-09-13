@@ -4,7 +4,7 @@ _Friday 13.09.2019 - Cambridge, MA_
 
 ## 1. The agent
 
-The agent I have designed is a variation of the wellknown tit-for-tat (TfT) agent. See figure 1 for a representation of the agent in automaton-form:
+The resulting agent is a variation of the wellknown tit-for-tat (TfT) agent. This means that the agent will cooperate as long as the opponent also cooperates, but once the opponent defects, so will this agent. See figure 1 for a representation of the agent in automaton-form:
 
 ![Automaton-representation of agent](https://github.com/ankile/cs136/blob/master/P0%20-%20Prisoners'%20dilemma/img/agent.jpeg)
 
@@ -14,7 +14,7 @@ There are two main things that makes this agent different from the normal TfT-va
 
 The reasons for these choices will be discussed in the Analysis-section.
 
-The agent given in the table-form is given below:
+The agent given in table-form is given below:
 
 | State | P(C) | CC | CD | DC | DD |
 |-------|------|----|----|----|----|
