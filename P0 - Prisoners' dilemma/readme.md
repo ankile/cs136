@@ -36,3 +36,13 @@ It has previously been shown that the TfT-strategy is a very effective one. Howe
 The second deviation from the normal TfT-strategy is the introduction of the non-zero chance of defecting in cooperate-mode. In my case I found P(D) = 10% to work well. The reasoning here is that since the envionment is already noisy and agents will be observed to be defecting regardless of if they did or not, one can get away with actually defecting just a little bit, to exploit the other forgiving strategies, just enough to make a difference, but not so much that they will notice.
 
 ## 3. Empirical results
+
+To test my this hypothesis a simulated arena was made in Python. In it was put a a couple of different strategies, like "Always defect", "Always cooperate" and different variations of the TfT. When the competation was run under the same circumstances as in the real compition, and meeting different combinations of opponents, the above explained strategy works overall very well. See the below illustration for an example of the results from such a simulation.
+
+![A selfmade simulation of different agents show promising results](https://github.com/ankile/cs136/blob/master/P0%20-%20Prisoners'%20dilemma/img/empirical_results.png)
+
+It is also interesting to note that "Always defect" is by far the worst strategy. Also, notice how both TfT and TfTTT (i.e. a step more forgiving than the agent in question) both do worse than the described agent. This also confirmes the hypothesis regarding forgiveness and exploitation.
+
+## 4. Conclusion
+
+Overall, the TfT strategy does very well. Still, it is very obvious that being a little more forgiving is a huge advantage in this game since people could be observed to be defecting when they in fact did not do that. Still that has to be balances with not being exploited by predatory strategies. The above agent answers both these concerns, while also trying to slightly exploiting this noisy environment to squeeze out som extra marginal gains.
