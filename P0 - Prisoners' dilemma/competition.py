@@ -19,16 +19,16 @@ class Competition:
             "\n",
             "#".rjust(wcol0 - 1) + " ",
             "Contestant".ljust(wcol1),
-            "Score".ljust(wcol2),
+            "Score".rjust(wcol2),
         )
 
-        print("-" * (wcol0 + wcol1 + wcol2))
+        print("-" * (wcol0 + wcol1 + wcol2 + 3))
         for i, result in enumerate(sorted_result, start=1):
             contestant, score = result
             print(
                 str(i).rjust(wcol0) + " ",
                 str(contestant).ljust(wcol1),
-                str(score).ljust(wcol2),
+                str(score).rjust(wcol2),
             )
 
         print()
@@ -73,6 +73,10 @@ if __name__ == "__main__":
     btftt95 = ["0: 0.95 0 1 0 1", "1: 0.95 0 2 0 2", "2: 0.0 0 2 0 2"]
     btftt90 = ["0: 0.90 0 1 0 1", "1: 0.90 0 2 0 2", "2: 0.0 0 2 0 2"]
     btftt75 = ["0: 0.75 0 1 0 1", "1: 0.75 0 2 0 2", "2: 0.0 0 2 0 2"]
+    gbtftt90 = ["0: 0.90 0 1 0 1", "1: 0.90 0 2 0 2", "2: 0.1 0 2 0 2"]
+    ex1 = ["0: 0.4 0 0 0 0"]
+    ex2 = ["0: 0.6 1 0 0 1", "1: 0.8 1 0 0 1"]
+    ex3 = ["0: 0.1 1 0 0 1", "1: 0.7 1 1 0 2", "2: 0.4 2 2 1 0"]
 
     agents = [
         Agent(ad, name="Always defect"),
@@ -93,12 +97,16 @@ if __name__ == "__main__":
         Agent(btftt95, name="Bad tit for tat-tat-95"),
         Agent(btftt90, name="Bad tit for tat-tat-90"),
         Agent(btftt75, name="Bad tit for tat-tat-75"),
+        Agent(gbtftt90, name="Good-bad tit for tat-tat-90"),
         Agent(p95, name="0.95 tit for tat"),
         Agent(p85, name="0.85 tit for tat"),
         Agent(p75, name="0.75 tit for tat"),
         Agent(tftt95, name="0.95 tit for tat-tat"),
         Agent(tftt75, name="0.75 tit for tat-tat"),
         Agent(tftt50, name="0.50 tit for tat-tat"),
+        Agent(ex1, name="Example 1"),
+        Agent(ex2, name="Example 2"),
+        Agent(ex3, name="Example 3"),
     ]
 
     c = Competition(agents)
