@@ -6,7 +6,7 @@ _Friday 13.09.2019 - Cambridge, MA_
 
 The resulting agent is a variation of the wellknown tit-for-tat (TfT) agent. This means that the agent will cooperate as long as the opponent also cooperates, but once the opponent defects, so will this agent. See figure 1 for a representation of the agent in automaton-form:
 
-![Automaton-representation of agent](https://github.com/ankile/cs136/blob/master/P0%20-%20Prisoners'%20dilemma/img/agent.jpeg)
+![Automaton-representation of agent](https://github.com/ankile/cs136/blob/master/p0-prisoners-dilemma/img/agent.jpeg)
 
 There are two main things that makes this agent different from the normal TfT-variation:
 1. There is an extra state which also is cooperative which is reached from the initial state by the opponent defecting.
@@ -39,7 +39,7 @@ The second deviation from the normal TfT-strategy is the introduction of the non
 
 To test my this hypothesis a simulated arena was made in Python. In it was put a a couple of different strategies, like "Always defect", "Always cooperate" and different variations of the TfT. When the competation was run under the same circumstances as in the real compition, and meeting different combinations of opponents, the above explained strategy works overall very well. See the below illustration for an example of the results from such a simulation.
 
-![A selfmade simulation of different agents show promising results](https://github.com/ankile/cs136/blob/master/P0%20-%20Prisoners'%20dilemma/img/empirical_results.png)
+![A selfmade simulation of different agents show promising results](https://github.com/ankile/cs136/blob/master/p0-prisoners-dilemma/img/empirical_results.png)
 
 It is also interesting to note that "Always defect" is by far the worst strategy. Also, notice how both TfT and TfTTT (i.e. a step more forgiving than the agent in question) both do worse than the described agent. This also confirmes the hypothesis regarding forgiveness and exploitation.
 
