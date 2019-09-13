@@ -34,7 +34,7 @@ class Competition:
         print()
 
     def compete(self):
-        for _ in range(100):
+        for _ in range(10):
             for i, c1 in enumerate(self.contestants, start=1):
                 for c2 in self.contestants[i:]:
                     c1.reset()
@@ -74,6 +74,8 @@ if __name__ == "__main__":
     btftt90 = ["0: 0.90 0 1 0 1", "1: 0.90 0 2 0 2", "2: 0.0 0 2 0 2"]
     btftt75 = ["0: 0.75 0 1 0 1", "1: 0.75 0 2 0 2", "2: 0.0 0 2 0 2"]
     gbtftt90 = ["0: 0.90 0 1 0 1", "1: 0.90 0 2 0 2", "2: 0.1 0 2 0 2"]
+    btftt90v2 = ["0: 0.90 0 1 0 1", "1: 1.0 0 2 0 2", "2: 0.0 0 2 0 2"]
+    btftt90v3 = ["0: 1.0 0 1 0 1", "1: 0.9 0 2 0 2", "2: 0.0 0 2 0 2"]
     ex1 = ["0: 0.4 0 0 0 0"]
     ex2 = ["0: 0.6 1 0 0 1", "1: 0.8 1 0 0 1"]
     ex3 = ["0: 0.1 1 0 0 1", "1: 0.7 1 1 0 2", "2: 0.4 2 2 1 0"]
@@ -82,22 +84,26 @@ if __name__ == "__main__":
         Agent(ad, name="Always defect"),
         Agent(ad, name="Always defect2"),
         Agent(ad, name="Always defect3"),
-        Agent(ac, name="Always cooperate"),
         Agent(ad, name="Always defect4"),
+        Agent(ac, name="Always cooperate"),
         Agent(tft, name="Tit for tat"),
         Agent(tft, name="Tit for tat2"),
         Agent(tft, name="Tit for tat3"),
         Agent(tft, name="Tit for tat4"),
+        # Agent(tft, name="Tit for tat5"),
+        # Agent(tft, name="Tit for tat6"),
         Agent(tftt, name="Tit for tat-tat"),
         Agent(tftt, name="Tit for tat-tat2"),
         Agent(tftt, name="Tit for tat-tat3"),
         Agent(tftt, name="Tit for tat-tat4"),
         Agent(tftt, name="Tit for tat-tat5"),
         Agent(tfttt, name="Tit for tat-tat-tat"),
-        Agent(btftt95, name="Bad tit for tat-tat-95"),
-        Agent(btftt90, name="Bad tit for tat-tat-90"),
-        Agent(btftt75, name="Bad tit for tat-tat-75"),
-        Agent(gbtftt90, name="Good-bad tit for tat-tat-90"),
+        Agent(btftt95, name="Tit for tat-tat-95"),
+        Agent(btftt90, name="Tit for tat-tat-90"),
+        Agent(btftt75, name="Tit for tat-tat-75"),
+        Agent(btftt90v2, name="Tit for tat-tat-90-100"),
+        Agent(btftt90v3, name="Tit for tat-tat-100-90"),
+        Agent(gbtftt90, name="Tit for tat-tat-90-10"),
         Agent(p95, name="0.95 tit for tat"),
         Agent(p85, name="0.85 tit for tat"),
         Agent(p75, name="0.75 tit for tat"),
